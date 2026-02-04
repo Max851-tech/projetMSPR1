@@ -36,33 +36,32 @@ Le backend centralise des données hétérogènes (open data Kaggle), les nettoi
 - **Sécurité** : JWT, CORS, rate limiting
 
 ## Structure du projet
-projetMSP1
-├── docs
-│   ├── models
-│   │   ├── mcd.png             # Diagramme MCD (Eraser.io)
-│   │   ├── mld.png             # Diagramme MLD
-│   │   ├── mpd.sql             # Script SQL physique
-│   │   └── data-dictionary.md  # Tableau tables/colonnes/description/contraintes
-│   └── architecture
-│       └── architecture-flux.png  # Diagramme flux global
-├── backend
-│   └── app
-│       ├── main.py             # Point d'entrée FastAPI
-│       └── ...                 # routes, models, etc.
-├── etl
-│   ├── ingest.py               # Scripts ingestion/cleaning
-│   └── quality_report.py       # Rapport qualité ETL
-├── dashboard
-│   └── metabase-config/        # Config dashboards
-├── migrations                  # Alembic si migrations
-├── .github
-│   └── workflows
-│       └── lint.yml            # CI basique
-├── docker-compose.yml
-├── .env.example
-├── README.md
-└── .gitignore
-text
-├── .env.example
-├── README.md
-└── .gitignore
+## Structure du projet
+
+```text
+projetMSP1/
+├── docs/
+│   ├── models/                        # Modèle Merise
+│   │   ├── mcd.png                    # Diagramme MCD (Eraser.io)
+│   │   ├── mld.png                    # Diagramme MLD
+│   │   ├── mpd.sql                    # Script SQL physique
+│   │   └── data-dictionary.md         # Tableau tables/colonnes/description/contraintes
+│   └── architecture/                  # Diagrammes d'architecture
+│       └── architecture-flux.png      # Diagramme flux global
+├── backend/                           # Couche API (FastAPI)
+│   └── app/                           # Application principale
+│       ├── main.py                    # Point d'entrée FastAPI
+│       └── ...                        # routes, models, etc.
+├── etl/                               # Couche ETL (Data Engineer)
+│   ├── ingest.py                      # Scripts ingestion/cleaning
+│   └── quality_report.py              # Rapport qualité ETL
+├── dashboard/                         # Couche visualisation
+│   └── metabase-config/               # Config dashboards (Metabase/Superset)
+├── migrations/                        # Alembic (si migrations utilisées)
+├── .github/
+│   └── workflows/                     # CI/CD GitHub Actions
+│       └── lint.yml                   # CI basique (lint/tests)
+├── docker-compose.yml                 # Environnement Docker complet
+├── .env.example                       # Variables d'environnement exemple
+├── README.md                          # Cette page
+└── .gitignore                         # Fichiers à ignorer
