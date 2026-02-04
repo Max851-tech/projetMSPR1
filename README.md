@@ -36,17 +36,33 @@ Le backend centralise des données hétérogènes (open data Kaggle), les nettoi
 - **Sécurité** : JWT, CORS, rate limiting
 
 ## Structure du projet
-projetMSP1/
-├── docs/
-│   ├── models/               # MCD, MLD, MPD, dictionnaire de données
-│   └── architecture/         # Diagrammes flux, infra
-├── backend/                  # FastAPI app
-│   └── app/
-├── etl/                      # Scripts Python ETL
-├── dashboard/                # Config Metabase/Superset
-├── migrations/               # Alembic (si utilisé)
-├── .github/workflows/        # CI GitHub Actions
+projetMSP1
+├── docs
+│   ├── models
+│   │   ├── mcd.png             # Diagramme MCD (Eraser.io)
+│   │   ├── mld.png             # Diagramme MLD
+│   │   ├── mpd.sql             # Script SQL physique
+│   │   └── data-dictionary.md  # Tableau tables/colonnes/description/contraintes
+│   └── architecture
+│       └── architecture-flux.png  # Diagramme flux global
+├── backend
+│   └── app
+│       ├── main.py             # Point d'entrée FastAPI
+│       └── ...                 # routes, models, etc.
+├── etl
+│   ├── ingest.py               # Scripts ingestion/cleaning
+│   └── quality_report.py       # Rapport qualité ETL
+├── dashboard
+│   └── metabase-config/        # Config dashboards
+├── migrations                  # Alembic si migrations
+├── .github
+│   └── workflows
+│       └── lint.yml            # CI basique
 ├── docker-compose.yml
+├── .env.example
+├── README.md
+└── .gitignore
+text
 ├── .env.example
 ├── README.md
 └── .gitignore
