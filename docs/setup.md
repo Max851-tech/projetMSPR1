@@ -21,3 +21,7 @@
 PostgreSQL : localhost:5432
 Metabase : http://localhost:3000
 API (placeholder) : http://localhost:8000/docs
+
+
+Arrêt
+docker-compose down
