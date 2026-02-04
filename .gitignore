@@ -1,0 +1,10 @@
+# Datasets bruts (lourds)
+data/raw/*
+data/processed/*
+
+# Environnements
+.env
+*.log
+__pycache__/
+*.pyc
+postgres_data/
