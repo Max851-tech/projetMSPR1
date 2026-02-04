@@ -73,12 +73,6 @@ projetMSP1/
 └── .gitignore                         # Fichiers à ignorer
 
 
-
-
-
-
-
-
 ## Installation et lancement local (avec Docker)
 Prérequis : Docker & Docker Compose installés.
 
