@@ -36,3 +36,17 @@ Le backend centralise des données hétérogènes (open data Kaggle), les nettoi
 - **Sécurité** : JWT, CORS, rate limiting
 
 ## Structure du projet
+projetMSP1/
+├── docs/
+│   ├── models/               # MCD, MLD, MPD, dictionnaire de données
+│   └── architecture/         # Diagrammes flux, infra
+├── backend/                  # FastAPI app
+│   └── app/
+├── etl/                      # Scripts Python ETL
+├── dashboard/                # Config Metabase/Superset
+├── migrations/               # Alembic (si utilisé)
+├── .github/workflows/        # CI GitHub Actions
+├── docker-compose.yml
+├── .env.example
+├── README.md
+└── .gitignore
