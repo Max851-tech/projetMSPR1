@@ -71,3 +71,12 @@ projetMSP1/
 ├── .env.example                       # Variables d'environnement exemple
 ├── README.md                          # Cette page
 └── .gitignore                         # Fichiers à ignorer
+
+
+## Installation et lancement local (avec Docker)
+Prérequis : Docker & Docker Compose installés.
+
+1. Clone le repo
+   ```bash
+   git clone https://github.com/Max851-tech/projetMSP1.git
+   cd projetMSP1
