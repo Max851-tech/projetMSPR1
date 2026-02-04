@@ -105,3 +105,10 @@ Prochaines étapes :
 - Configuration CI GitHub Actions (lint + tests)
 - Intégration sécurité minimale (JWT, CORS)
 - Revue et merge des PR des autres membres
+
+Liens utiles :
+
+- Cahier des charges : [Lien PDF ou Google Drive si partagé]
+- Datasets Kaggle utilisés : [Liste des 4 liens]
+
+Projet réalisé dans le cadre de la formation EPSI – 2025/2026
