@@ -36,31 +36,37 @@ Le backend centralise des données hétérogènes (open data Kaggle), les nettoi
 - **Sécurité** : JWT, CORS, rate limiting
 
 ## Structure du projet
-## Structure du projet
 
 ```text
 projetMSP1/
-├── docs/
+├── docs/                              # Documentation & livrables
 │   ├── models/                        # Modèle Merise
 │   │   ├── mcd.png                    # Diagramme MCD (Eraser.io)
 │   │   ├── mld.png                    # Diagramme MLD
-│   │   ├── mpd.sql                    # Script SQL physique
-│   │   └── data-dictionary.md         # Tableau tables/colonnes/description/contraintes
+│   │   ├── mpd.sql                    # Script SQL physique (MPD)
+│   │   └── data-dictionary.md         # Dictionnaire de données (tables/colonnes/description/contraintes)
 │   └── architecture/                  # Diagrammes d'architecture
 │       └── architecture-flux.png      # Diagramme flux global
+├── data/                              # Datasets bruts et intermédiaires (nouveau dossier !)
+│   ├── raw/                           # Datasets téléchargés de Kaggle (non versionnés)
+│   │   ├── gym_members_exercise.csv
+│   │   ├── daily_food_nutrition.csv
+│   │   ├── sleep_health_lifestyle.csv
+│   │   └── fitness_exercises.csv
+│   └── processed/                     # Données nettoyées/exportées par l'ETL
 ├── backend/                           # Couche API (FastAPI)
 │   └── app/                           # Application principale
 │       ├── main.py                    # Point d'entrée FastAPI
-│       └── ...                        # routes, models, etc.
+│       └── ...                        # routes, models, services, etc.
 ├── etl/                               # Couche ETL (Data Engineer)
-│   ├── ingest.py                      # Scripts ingestion/cleaning
-│   └── quality_report.py              # Rapport qualité ETL
+│   ├── ingest.py                      # Scripts ingestion, nettoyage, validation
+│   └── quality_report.py              # Génération rapports qualité ETL
 ├── dashboard/                         # Couche visualisation
-│   └── metabase-config/               # Config dashboards (Metabase/Superset)
-├── migrations/                        # Alembic (si migrations utilisées)
+│   └── metabase-config/               # Configuration Metabase/Superset (dashboards)
+├── migrations/                        # Alembic (si migrations DB utilisées)
 ├── .github/
 │   └── workflows/                     # CI/CD GitHub Actions
-│       └── lint.yml                   # CI basique (lint/tests)
+│       └── lint.yml                   # CI basique (lint + tests)
 ├── docker-compose.yml                 # Environnement Docker complet
 ├── .env.example                       # Variables d'environnement exemple
 ├── README.md                          # Cette page
