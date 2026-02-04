@@ -93,3 +93,8 @@ Accès :
 - PostgreSQL : localhost:5432 (user: healthai, pass: secret, db: mspr_fitness)
 - Metabase (dashboard) : http://localhost:3000
 - API (placeholder) : http://localhost:8000/docs
+
+Architecture globale
+Architecture Flux Données : https://app.eraser.io/workspace/xvBa6HL4TyZJFFB5Txxw?origin=share
+Flux principal :
+Kaggle Datasets (Sleep, Gym, Nutrition, Exercises) → ETL (nettoyage/validation) → PostgreSQL → FastAPI API → Dashboard Metabase
