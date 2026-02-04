@@ -80,3 +80,16 @@ Prérequis : Docker & Docker Compose installés.
    ```bash
    git clone https://github.com/Max851-tech/projetMSP1.git
    cd projetMSP1
+
+2. Copie l'exemple .env
+cp .env.example .env
+(Adapte les variables si besoin : POSTGRES_PASSWORD, etc.)
+
+3. Lance l'environnement
+docker-compose up -d
+
+Accès :
+
+- PostgreSQL : localhost:5432 (user: healthai, pass: secret, db: mspr_fitness)
+- Metabase (dashboard) : http://localhost:3000
+- API (placeholder) : http://localhost:8000/docs
