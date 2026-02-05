@@ -48,10 +48,9 @@ services:
     environment:
       DATABASE_URL: postgresql://$$   {POSTGRES_USER}:   $${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
 
-
-        etl:
+  etl:
     image: python:3.11-slim
-    restart: "no"  # Ne redémarre pas automatiquement, on le lance manuellement pour tests
+    restart: "no"
     command: >
       sh -c "echo 'ETL placeholder ready - $(date)' && sleep 3600"
     volumes:
