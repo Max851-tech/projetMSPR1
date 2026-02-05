@@ -36,7 +36,7 @@ services:
       MB_ADMIN_EMAIL: ${MB_ADMIN_EMAIL}
       MB_ADMIN_PASSWORD: ${MB_ADMIN_PASSWORD}
 
-  api:  # placeholder - remplace par ton image FastAPI quand prête
+  api:
     build: ./backend
     ports:
       - "8000:8000"
